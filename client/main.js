@@ -1,9 +1,11 @@
 import "dotenv/config";
 
-const accessKey = process.env.REACT_APP_API_KEY;
+const apiKey = process.env.API_KEY;
  
 // get base url
-const url = "http://api.open-notify.org/iss-now.json";
+// const url = "http://api.open-notify.org/iss-now.json";
+
+const url = "https://api.wheretheiss.at/v1/satellites/25544"
 
 // console.log(url);
 // retrieve space station lat and lon
@@ -19,7 +21,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: `${accessKey}`,
+    accessToken: `${apiKey}`,
 }).addTo(map);
 
 const myIcon = L.icon({
@@ -35,7 +37,7 @@ function waitForJSON(res) {
 function handleData(data) {
   // clear layers before reloading new location
   fg.clearLayers();
-  const ISSlocation = data.iss_position;
+  const ISSlocation = data;
   const long = ISSlocation.longitude;
   const lat = ISSlocation.latitude;
   const html = `
