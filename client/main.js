@@ -1,5 +1,7 @@
 import "dotenv/config";
 
+const accessKey = process.env.API_KEY;
+ 
 // get base url
 const url = "http://api.open-notify.org/iss-now.json";
 
@@ -11,15 +13,13 @@ const outputDiv = document.querySelector('#output')
 const map = L.map('map');
 const fg = L.featureGroup().addTo(map);
 
-const accessKey = process.env.API_KEY;
-
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 5,
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: accessKey,
+    accessToken: `${accessKey}`,
 }).addTo(map);
 
 const myIcon = L.icon({
