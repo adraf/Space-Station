@@ -1,6 +1,6 @@
 import "dotenv/config";
 
-const accessKey = process.env.API_KEY;
+const accessKey = process.env.REACT_APP_API_KEY;
  
 // get base url
 const url = "http://api.open-notify.org/iss-now.json";
