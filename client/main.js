@@ -3,13 +3,11 @@ import "dotenv/config";
 const apiKey = process.env.API_KEY;
  
 // get base url
-// const url = "http://api.open-notify.org/iss-now.json";
-
 const url = "https://api.wheretheiss.at/v1/satellites/25544"
 
 // console.log(url);
 // retrieve space station lat and lon
-// add it to google maps api
+// add it to maps api
 
 const outputDiv = document.querySelector('#output')
 const map = L.map('map');
@@ -40,14 +38,19 @@ function handleData(data) {
   const ISSlocation = data;
   const long = ISSlocation.longitude;
   const lat = ISSlocation.latitude;
+  const light = ISSlocation.visibility;
   const html = `
     <div class="box">
-    <p>Latitude:</p>
+    <p>Latitude:&nbsp;</p>
     <p id="mapLat">${lat}</p>
     </div>
     <div class="box">
-    <p>Longitude:</p>
+    <p>Longitude:&nbsp;</p>
     <p id="mapLong">${long}</p>
+    </div>
+    <div class="box">
+    <p>Visibility:&nbsp;</p>
+    <p id="light">${light}</p>
     </div>
   `
   outputDiv.innerHTML = html;  
