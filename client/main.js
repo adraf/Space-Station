@@ -23,7 +23,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map);
 
 const myIcon = L.icon({
-  iconUrl: 'ISS.png',
+  iconUrl: 'https://raw.githubusercontent.com/adraf/Space-Station/main/client/public/ISS.png',
   iconSize: [40, 40],
   iconAnchor: [20, 20],
 });
