@@ -55,7 +55,9 @@ function handleData(data) {
   `
   outputDiv.innerHTML = html;  
   map.setView([lat, long], 13);
-  L.marker([lat, long], {icon: myIcon}).addTo(fg);
+  L.marker([lat, long], {icon: myIcon}).addTo(fg)
+  .bindPopup(`Latitude: ${lat},<br> Longitude: ${long}`, {offset: [0, -20]})
+  .closePopup();
 }
 
 function update() {
