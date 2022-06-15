@@ -57,12 +57,12 @@ I had issues when taking the site live as the map wouldn't load. After looking f
 
 ## Wins
 
+Able to add in a layer with the help of [Leaflet.Terminator](https://github.com/joergdietrich/Leaflet.Terminator) to show the current day and night regions around the world. 
 
 ## Key Learnings
 
 
 ## Future Content
 
-- Adding in a layer to the map to show if the ISS is in daylight or darkness.
 - Additional information as to who is currently abord the station, and other stats.
 
