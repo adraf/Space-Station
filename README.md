@@ -1,5 +1,5 @@
 # Speace Station
-### Completed June 2022
+### Completed March 2022
 
 ## Project Overview
 A web application to show you the current location of the International Space Station. This uses an [API](https://wheretheiss.at/) to tell Longitude and Latitude, which feeds into [Leaflet](https://leafletjs.com/) and [MapBox](https://www.mapbox.com/) to produce an interactive map. Users can then follow the path of the space station around the globe.
