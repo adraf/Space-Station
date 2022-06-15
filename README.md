@@ -1,4 +1,4 @@
-# Speace Station
+# Space Station
 ### Completed March 2022
 
 ## Project Overview
