@@ -38,7 +38,7 @@ function handleData(data) {
   const ISSlocation = data;
   const long = ISSlocation.longitude;
   const lat = ISSlocation.latitude;
-  const light = ISSlocation.visibility;
+  const light = ISSlocation.visibility[0].toUpperCase() + ISSlocation.visibility.slice(1).toLowerCase();
   const html = `
     <div class="box">
     <p>Latitude:&nbsp;</p>
@@ -56,7 +56,7 @@ function handleData(data) {
   outputDiv.innerHTML = html;  
   map.setView([lat, long], 13);
   L.marker([lat, long], {icon: myIcon}).addTo(fg)
-  .bindPopup(`Latitude: ${lat},<br> Longitude: ${long}`, {offset: [0, -20]})
+  .bindPopup(`Latitude: ${lat}<br>Longitude: ${long}<br>Visibility: ${light}`, {offset: [0, -20]})
   .closePopup();
 }
 
@@ -64,4 +64,11 @@ function update() {
   fetch(url).then(waitForJSON).then(handleData)
   setTimeout(update, 5000);
 };
+
+// Terminator overlay for Leaflet Earth Map
+var terminator = L.terminator().addTo(map);
+setInterval(function() {
+	terminator.setTime();
+}, 60000); // Updates every minute
+
 update();

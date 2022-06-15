@@ -18,17 +18,18 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
+  <!-- Terminator overlay for Leaflet Earth Map -->
+  <script src="https://unpkg.com/@joergdietrich/leaflet.terminator"></script>
 </head>
 <body>
   <h1>Space Station Location</h1>
   <h3>Current Location:</h3>
-  <div id="output"></div>
   <div id="map"></div>
+  <div id="output"></div>
   <footer>
     <p>Created by <a href="http://adamraffertywebdesign.com/">adraf</a></p>
-    <p>Map API by <a href="https://leafletjs.com/">Leaflet</a></p>
     <p>Space API by <a href="https://wheretheiss.at/">Where the ISS at?</a></p>
-    <p></p>
+    <p>Map API by <a href="https://leafletjs.com/">Leaflet</a>, and sun position overlay by <a href="https://github.com/joergdietrich/Leaflet.Terminator">Leaflet.Terminator</a></p>
   </footer>
   <script src="main.js" type="module"></script>
 </body>
