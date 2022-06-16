@@ -15,7 +15,8 @@ const fg = L.featureGroup().addTo(map);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 5,
+    maxZoom: 15,
+    minZoom: 0,
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1,
@@ -41,23 +42,22 @@ function handleData(data) {
   const light = ISSlocation.visibility[0].toUpperCase() + ISSlocation.visibility.slice(1).toLowerCase();
   const html = `
     <div class="box">
-    <p>Latitude:&nbsp;</p>
-    <p id="mapLat">${lat}</p>
+      <p>Latitude:&nbsp;</p>
+      <p id="mapLat">${lat}</p>
     </div>
     <div class="box">
-    <p>Longitude:&nbsp;</p>
-    <p id="mapLong">${long}</p>
+      <p>Longitude:&nbsp;</p>
+      <p id="mapLong">${long}</p>
     </div>
     <div class="box">
-    <p>Visibility:&nbsp;</p>
-    <p id="light">${light}</p>
+      <p>Visibility:&nbsp;</p>
+      <p id="light">${light}</p>
     </div>
   `
   outputDiv.innerHTML = html;  
-  map.setView([lat, long], 13);
+  map.setView([lat, long], 5);
   L.marker([lat, long], {icon: myIcon}).addTo(fg)
   .bindPopup(`Latitude: ${lat}<br>Longitude: ${long}<br>Visibility: ${light}`, {offset: [0, -20]})
-  .closePopup();
 }
 
 function update() {
