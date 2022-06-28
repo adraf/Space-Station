@@ -23,19 +23,29 @@ h3,
   color: rgb(85, 209, 13);
 }
 
+#buttonNav {
+  display: flex;
+  justify-content: space-around;
+  max-width: 900px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
 button {
   border: 0;
   border-radius: 8px;
   background: rgba(43,41,69,255);
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: "Bungee", Arial, sans-serif;
   text-decoration: none;
   padding: 18px 25px;
   margin: 15px;
   cursor: pointer;
   opacity: 0.9;
+  min-width: 250px;
   max-width: 250px;
+  min-height: 75px;
 }
 
 #map, #apodImg {
@@ -70,6 +80,7 @@ button {
 }
 
 footer {
+  opacity: 0.8;
   font-size: 0.8rem;
   text-align: center;
   padding: 10px 0;
@@ -106,26 +117,28 @@ footer a:hover {
   padding: 10px;
   background-color: rgb(85, 209, 13);
   color: black;
+  z-index: 2;
 }
 
 #topRightArrow, #bottomLeftArrow {
   position: absolute;
   background-image: url(./public/greenArrow.png);
-  height: 7vh;
-  width: 7vh;
+  height: 7vw;
+  width: 7vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; 
+  z-index: 1;
 }
 
 #topRightArrow {
   transform: rotate(45deg);
-  top: 20;
-  right: 20;
+  top: 0;
+  right: 0;
 }
 
 #bottomLeftArrow {
   transform: rotate(225deg);
-  bottom: 20;
-  left: 20;
+  bottom: 0;
+  left: 0;
 }

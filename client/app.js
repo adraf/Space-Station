@@ -1,5 +1,6 @@
 import "dotenv/config";
 import getAPOD from "./apod";
+import getAsteroids from "./asteroid.js";
 
 const apiKey = process.env.API_KEY;
  

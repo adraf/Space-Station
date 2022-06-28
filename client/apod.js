@@ -1,5 +1,6 @@
 import "dotenv/config";
 import update from "./app.js"
+import getAsteroids from "./asteroid.js";
 
 const apiKey = process.env.NASA_API_KEY;
 const url = `https://api.nasa.gov/planetary/apod?api_key=`

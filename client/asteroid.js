@@ -20,7 +20,8 @@
 // Next: Randomise images of meteors each time page loads/for each entry when for loop works
 
 import "dotenv/config";
-
+import update from "./app.js"
+import getAPOD from "./apod";
 
 const meteorDiv = document.querySelector('#output');
 
@@ -97,7 +98,7 @@ document.body.addEventListener('click', function(event) {
   if(meteorBtn) {
     meteorDiv.innerHTML = `<div id="loader"><h1>Loading...</h1></div>`
     // change h3 title
-    issSubTitle.innerHTML = "Meteor Activity";
+    issSubTitle.innerHTML = "Asteroid Activity";
     // hide map
     map.style.display = "none";
     getAsteroids();
