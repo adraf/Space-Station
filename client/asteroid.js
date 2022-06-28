@@ -75,12 +75,33 @@ function handleAsteroidData(data) {
         <p id="meteorImgText">Diameter:&nbsp;${meteorSizeMax}&nbsp;feet</p>
         <div id="bottomLeftArrow"></div>
       </div>
-      <h3>Where? ${planet}</h3>
-      <h3>When? ${missDate}</h3>
-      <p>Was it dangerous? ${meteorHazardResult}</p>
-      <p>The diameter was a maximum size of ${meteorSizeMax} feet</p>
-      <p>How close? ${missDistance} miles away</p>
-      <p>How quick was it? ${missSpeed} mph</p>
+      <div id="iconMeteorInfo">
+        <section>
+          <div id="iconPlanet"></div>
+          <p class="iconTitle">Orbiting Body</p>
+          <p class="iconAnswer">${planet}</p>
+        </section>
+        <section>
+          <div id="iconDate"></div>
+          <p class="iconTitle">Close Approach Date</p>
+          <p class="iconAnswer">${missDate}</p>
+        </section>
+        <section>
+          <div id="iconHazard"></div>
+          <p class="iconTitle">Hazardous Asteroid</p>
+          <p class="iconAnswer">${meteorHazardResult}</p>
+        </section>
+        <section>
+          <div id="iconDistance"></div>
+          <p class="iconTitle">Miss Distance</p>
+          <p class="iconAnswer">${missDistance} miles</p>
+        </section>
+        <section>
+          <div id="iconSpeed"></div>
+          <p class="iconTitle">Relative Velocity</p>
+          <p class="iconAnswer">${missSpeed} mph</p>
+        </section>
+      </div>
     </div>
   `  
   meteorDiv.innerHTML = html;

@@ -123,8 +123,8 @@ footer a:hover {
 #topRightArrow, #bottomLeftArrow {
   position: absolute;
   background-image: url(./public/greenArrow.png);
-  height: 7vw;
-  width: 7vw;
+  height: 3rem;
+  width: 3rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; 
@@ -141,4 +141,63 @@ footer a:hover {
   transform: rotate(225deg);
   bottom: 0;
   left: 0;
+}
+
+#iconMeteorInfo {
+  display: flex;
+  justify-content: space-evenly;
+  width: 95%;
+  margin: 25px auto;
+  flex-wrap: wrap;
+}
+
+#iconMeteorInfo section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+#iconMeteorInfo div {
+  top: 0;
+  width: 8vh;
+  height: 8vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; 
+  justify-self: flex-start;
+  margin-bottom: 10px;
+}
+
+.iconTitle {
+  color: rgb(85, 209, 13);
+}
+
+.iconAnswer {
+  color: white;
+}
+
+#iconMeteorInfo p {
+  font-size: 1.2rem;
+  max-width: 150px;
+}
+
+#iconPlanet {
+  background-image: url(./public/planet.png);
+}
+
+#iconDate {
+  background-image: url(./public/date.png);  
+}
+
+#iconHazard {
+  background-image: url(./public/hazard.png);  
+}
+
+#iconDistance {
+  background-image: url(./public/distance.png);  
+}
+
+#iconSpeed {
+  background-image: url(./public/speed.png);  
 }
