@@ -67,7 +67,7 @@ function handleData(data) {
 
 function update() {
   fetch(url).then(waitForJSON).then(handleData)
-  mapTimeOut = setTimeout(update, 5000);
+  const mapTimeOut = setTimeout(update, 5000);
 };
 
 // Terminator overlay for Leaflet Earth Map
