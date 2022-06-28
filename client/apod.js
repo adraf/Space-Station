@@ -44,7 +44,7 @@ document.body.addEventListener('click', function(event) {
     // hide map
     map.style.display = "none";
     getAPOD();
-    clearTimeout(mapTimeOut);
+    clearTimeout(window.mapTimeOut);
   }
 })
 

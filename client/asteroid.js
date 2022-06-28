@@ -63,18 +63,18 @@ function handleAsteroidData(data) {
   meteorDiv.innerHTML = "";
   const html = `
     <div class="meteorData"> 
-    <div id="meteorImg" 
-      style="
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain; 
-      height: ${meteorPicSize}px;
-      width: ${meteorPicSize}px;
-      margin: 0 auto;">
-      <div id="topRightArrow"></div>
-      <p id="meteorImgText">Diameter:&nbsp;${meteorSizeMax}&nbsp;feet</p>
-      <div id="bottomLeftArrow"></div>
-    </div>
+      <div id="meteorImg" 
+        style="
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain; 
+        height: ${meteorPicSize}px;
+        width: ${meteorPicSize}px;
+        margin: 50px auto;">
+        <div id="topRightArrow"></div>
+        <p id="meteorImgText">Diameter:&nbsp;${meteorSizeMax}&nbsp;feet</p>
+        <div id="bottomLeftArrow"></div>
+      </div>
       <h3>Where? ${planet}</h3>
       <h3>When? ${missDate}</h3>
       <p>Was it dangerous? ${meteorHazardResult}</p>
@@ -102,7 +102,7 @@ document.body.addEventListener('click', function(event) {
     // hide map
     map.style.display = "none";
     getAsteroids();
-    clearTimeout(mapTimeOut);
+    clearTimeout(window.mapTimeOut);
   }
 })
 

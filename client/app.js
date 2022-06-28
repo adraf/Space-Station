@@ -67,7 +67,7 @@ function handleData(data) {
 
 function update() {
   fetch(url).then(waitForJSON).then(handleData)
-  const mapTimeOut = setTimeout(update, 5000);
+  window.mapTimeOut = setTimeout(update, 5000);
 };
 
 // Terminator overlay for Leaflet Earth Map
@@ -91,7 +91,7 @@ document.body.addEventListener('click', function(event) {
     // re-display map
     map.style.display = "block";
     // added clearTimeout here too as the refresh rate was speeding up when moving from page to page. This clears and re-sets time.
-    clearTimeout(mapTimeOut);
+    clearTimeout(window.mapTimeOut);
     update();
   }
 })
