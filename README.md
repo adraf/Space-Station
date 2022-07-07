@@ -8,7 +8,7 @@ A web application to show you the current location of the International Space St
 
 - HTML5
 - CSS3
-- Javascript
+- JavaScript
 
 ## Featured Code
 
@@ -114,7 +114,7 @@ Able to add in a layer with the help of [Leaflet.Terminator](https://github.com/
 ## Key Learnings
 
 - Always check the console, it saves you so much time and extra work.
-- Plan with pseudocode as much as you can. It helps keep your train of thought, and it makes sure that you have a clear path of action without missing any steps.
+- Plan with Pseudocode as much as you can. It helps keep your train of thought, and it makes sure that you have a clear path of action without missing any steps.
 
 ## Bugs
 
