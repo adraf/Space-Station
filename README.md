@@ -104,7 +104,6 @@ document.body.addEventListener('click', function(event) {
    update();
  }
 })
-
 ```
 
 ## Wins
