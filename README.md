@@ -1,7 +1,7 @@
 # Space Station
 ### Completed June 2022
 
-** Time Frame **
+**Time Frame**
 
 The main space station tracker was originally completed in March, and I have since spent more time adding extra functionality. The current version was completed June 2022.
 
